@@ -17,9 +17,10 @@ terraform init \
     -backend-config="storage_account_name=${BACKEND_STORAGE_ACCOUNT}" \
     -backend-config="container_name=${BACKEND_STORAGE_CONTAINER}" \
     -backend-config="key=${BACKEND_KEY}" \
-   # -reconfigure
+    -reconfigure
 
 # enter any action here
 terraform $* 
 
+#clean up directory
 rm -rf .terraform
